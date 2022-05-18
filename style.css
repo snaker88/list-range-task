@@ -1,0 +1,31 @@
+body {
+    @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 2rem;
+    margin-top: 1rem;
+    border-radius: .5rem;
+}
+
+.cours {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #3c4043;
+    padding: 1rem;
+    border-radius: 0.2rem;
+    margin-bottom: 1rem;
+}
+
+.cours__prises {
+    min-width: 200px
+}
+
+.requiredRanges {
+    margin-bottom: 1rem;
+}

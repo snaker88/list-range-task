@@ -1,0 +1,39 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>vuejs project</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="container" id="app">
+        <h1>Courses list</h1>
+        <div class="requiredRanges">
+            <span>Filter by price: </span>
+            <select v-model="selectRange">
+                <option :value="[null, null]"></option>
+                <option v-for="requiredRange in requiredRanges " :value="requiredRange.requiredRange ">{{ requiredRange.text }}</option>
+            </select>
+        </div>
+        <div class="courses ">
+            <div class="cours " v-for="cours in filteredCourses ">
+                <div class="cours__name ">
+                    <h2>{{cours.name}}</h2>
+                </div>
+                <div class="cours__prises ">
+                    <ul>
+                        <li><b>price from:</b> {{cours.prices[0]}}</li>
+                        <li><b>price up to:</b> {{cours.prices[1]}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/vue@next "></script>
+    <script src="app.js "></script>
+</body>
+
+</html>
